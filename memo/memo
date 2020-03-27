@@ -1,0 +1,2 @@
+curl -X POST -d response_type=code -d client_id=clientapp -d scope=read -d redirect_uri=http://www.baidu.com http://localhost:8080/oauth/authorize
+curl -X GET -d response_type=code -d client_id=clientapp -d scope=read -d redirect_uri=http://www.baidu.com http://localhost:8080/oauth/authorize
