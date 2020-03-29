@@ -15,8 +15,8 @@ public class CustomTokenEnhancer implements TokenEnhancer {
             OAuth2Authentication authentication) {
         Map<String, Object> additionalInfo = new HashMap<>();
         //additionalInfo.put("organization", authentication.getName() + randomAlphabetic(4));
-        ((DefaultOAuth2AccessToken) accessToken).setAdditionalInformation(
-                additionalInfo);
+        DefaultOAuth2AccessToken defaultOAuth2AccessToken=(DefaultOAuth2AccessToken) accessToken;
+        defaultOAuth2AccessToken.setAdditionalInformation(additionalInfo);
         return accessToken;
     }
 }
